@@ -1,0 +1,18 @@
+;function called reverse-general that takes a list parameter L
+(define (reverse-general L)
+;if a list is null, display an empty list
+  (cond 
+      ((null? L) '())
+      ;if the input is a list
+       ((list? L)
+       ;append the reversed end of the list to the reversed beginning of the list
+       ;recursively call the reverse-general function to reverse the end of the list
+        (append (reverse-general (cdr L))
+          ;recursively call the reverse-general function to reverse the beginning of the list
+            (list (reverse-general (car L)))
+        )
+       )
+  ;return input list if it does not contain a full/empty list
+  (else L)
+   )
+)
