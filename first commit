@@ -1,0 +1,5 @@
+;function called reverse-general that takes a list parameter L
+(define (reverse-general L)
+;if a list is null, display an empty list
+  (cond 
+      ((null? L) '())
