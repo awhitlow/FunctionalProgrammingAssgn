@@ -1,0 +1,5 @@
+;function definition
+(define (sum-up-numbers-simple L )
+  ;if the list is empty, display 0 
+  (cond
+   ((null? L) 0)
