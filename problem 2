@@ -55,3 +55,10 @@
    ((eq? (car L)'x) (sum-up-numbers-simple(cdr L)))
    ;test if atom = y
    ((eq? (car L)'y) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = z
+   ((eq? (car L)'z) (sum-up-numbers-simple(cdr L)))
+   ;if an atom is a number, car atom and add it to the value returned when the function is called with the
+   ;remaining values in the list
+   (else (+(car L) (sum-up-numbers-simple(cdr L))))
+   )
+  )
