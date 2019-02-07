@@ -6,3 +6,15 @@
    ((null? L) 0)
    ;if the next value in the list is a list, recursively call the function with the remainder of the list
    ((list? (car L)) (+(sum-up-numbers-simple (car L)) (sum-up-numbers-simple (cdr L))))
+   ;test whether the values in the list are letters of the alphabet, if they are recursively call the function again with
+   ;the remainder of the list using cdr
+   ;test if the atom = a
+   ((eq? (car L)'a) (sum-up-numbers-simple(cdr L)))
+   ;test if the atom = b 
+   ((eq? (car L)'b) (sum-up-numbers-simple(cdr L)))
+   ;test if the atom = c
+   ((eq? (car L)'c) (sum-up-numbers-simple(cdr L)))
+   ;test if the atom = d
+   ((eq? (car L)'d) (sum-up-numbers-simple(cdr L)))
+   ;test if the atom = e
+   ((eq? (car L)'e) (sum-up-numbers-simple(cdr L)))
