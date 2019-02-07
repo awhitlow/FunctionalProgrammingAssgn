@@ -1,11 +1,8 @@
-(define (test L)
-;if the list is null, return 0
-  (if (null? L)
-      0
-      ;if the parameter is a list
-      (if (list? (car L))
-        ;recursively call function with the nested list as parameter
-        ;add that value to the remainder of the original list
-          (+ (test (car L)) (test (cdr L)))
-          ;else add the first value of the list to the remainder values
-          (+ (car L) (test (cdr L))))))
+
+;function definition
+(define (sum-up-numbers-simple L )
+  ;if the list is empty, display 0 
+  (cond
+   ((null? L) 0)
+   ;if the next value in the list is a list, recursively call the function with the remainder of the list
+   ((list? (car L)) (+(sum-up-numbers-simple (car L)) (sum-up-numbers-simple (cdr L))))
