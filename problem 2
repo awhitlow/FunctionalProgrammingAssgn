@@ -36,3 +36,12 @@
    ;test if atom = o
    ((eq? (car L)'o) (sum-up-numbers-simple(cdr L)))
    ;test if atom = p
+   ((eq? (car L)'p) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = q
+   ((eq? (car L)'q) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = r
+   ((eq? (car L)'r) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = s
+   ((eq? (car L)'s) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = t
+   ((eq? (car L)'t) (sum-up-numbers-simple(cdr L)))
