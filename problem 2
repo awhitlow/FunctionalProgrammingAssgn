@@ -15,9 +15,13 @@
    ((eq? (car L)'d) (sum-up-numbers-simple(cdr L)))
    ;test if the atom = e
    ((eq? (car L)'e) (sum-up-numbers-simple(cdr L)))
-   ;test if atom = letters f-j
+   ;test if atom = f
    ((eq? (car L)'f) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = g
    ((eq? (car L)'g) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = h
    ((eq? (car L)'h) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = i
    ((eq? (car L)'i) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = j
    ((eq? (car L)'j) (sum-up-numbers-simple(cdr L)))
