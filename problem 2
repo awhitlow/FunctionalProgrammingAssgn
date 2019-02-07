@@ -3,3 +3,15 @@
   ;if the list is empty, display 0 
   (cond
    ((null? L) 0)
+   ;test whether the values in the list are letters of the alphabet, if they are recursively call the function again with
+   ;the remainder of the list using cdr
+   ;test if the atom = a
+   ((eq? (car L)'a) (sum-up-numbers-simple(cdr L)))
+   ;test if the atom = b 
+   ((eq? (car L)'b) (sum-up-numbers-simple(cdr L)))
+   ;test if the atom = c
+   ((eq? (car L)'c) (sum-up-numbers-simple(cdr L)))
+   ;test if the atom = d
+   ((eq? (car L)'d) (sum-up-numbers-simple(cdr L)))
+   ;test if the atom = e
+   ((eq? (car L)'e) (sum-up-numbers-simple(cdr L)))
