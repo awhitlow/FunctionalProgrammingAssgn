@@ -7,3 +7,8 @@
    (else (second-smallest (min-list L2) L1 ))
   )
 ) 
+
+(define (min-list lst)
+  (cond
+   ((null? lst) #f)
+   
