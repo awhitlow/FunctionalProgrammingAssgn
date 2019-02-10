@@ -1,18 +1,39 @@
+;min-above-min function
 (define (min-above-min L1 L2)
   (cond
    ;if the first list is null, display #f
    ((null? L1) #f)
    ;if the second list is null, display the minimum of the first list
    ((null? L2) (min-list L1))
+   ;otherwise call the second-smallest function with the minimum of L2 and all of L1
    (else (second-smallest (min-list L2) L1 ))
   )
 ) 
 
+;min-list function to find the minimum of a list
 (define (min-list lst)
   (cond
+  ;if the list is null, display #f
    ((null? lst) #f)
+  ;if the list only has one value, return that value
    ((null? (cdr lst)) (car lst))
+  ;if the first value in the list is smaller than the remainder of the list, return the first value
    ((< (car lst) (min-list (cdr lst))) (car lst))
+  ;otherwise, recursively call the function witht the remainder of the list
    (else (min-list (cdr lst)))
   )
 )  
+
+;second-smallest function to find the smallest value in list 1 that is larger than the 
+;minimum of list 2
+(define (second-smallest atm lst)
+  (cond
+  ;if the list is null, return null value
+   ((null? lst) '())
+  ;if the first value in the list is equal to the minimum of the second list, remove it from the first list
+   ((=(car lst) atm) (second-smallest atm (cdr lst)))
+   ;otherwise, create a new list that does not contain the minimum. Find the minimum of this list to know the smallest
+   ;value that is larger than the minimum
+   (else (min-list(cons (car lst) (second-smallest atm (cdr lst)))))
+   )
+ )
