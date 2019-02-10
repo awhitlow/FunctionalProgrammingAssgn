@@ -1,0 +1,4 @@
+(define (min-above-min L1 L2)
+  (cond
+   ;if the first list is null, display #f
+   ((null? L1) #f)
