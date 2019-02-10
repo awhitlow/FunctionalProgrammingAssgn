@@ -2,3 +2,8 @@
   (cond
    ;if the first list is null, display #f
    ((null? L1) #f)
+   ;if the second list is null, display the minimum of the first list
+   ((null? L2) (min-list L1))
+   (else (second-smallest (min-list L2) L1 ))
+  )
+) 
