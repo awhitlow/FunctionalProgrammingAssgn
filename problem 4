@@ -11,4 +11,8 @@
 (define (min-list lst)
   (cond
    ((null? lst) #f)
-   
+   ((null? (cdr lst)) (car lst))
+   ((< (car lst) (min-list (cdr lst))) (car lst))
+   (else (min-list (cdr lst)))
+  )
+)  
