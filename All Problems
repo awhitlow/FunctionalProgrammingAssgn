@@ -1,0 +1,200 @@
+;Problem 1
+
+;function called reverse-general that takes a list parameter L
+(define (reverse-general L)
+;if a list is null, display an empty list
+  (cond 
+      ((null? L) '())
+      ;if the input is a list
+       ((list? L)
+       ;append the reversed end of the list to the reversed beginning of the list
+       ;recursively call the reverse-general function to reverse the end of the list
+        (append (reverse-general (cdr L))
+          ;recursively call the reverse-general function to reverse the beginning of the list
+            (list (reverse-general (car L)))
+        )
+       )
+  ;return input list if it does not contain a full/empty list
+  (else L)
+   )
+)
+
+;Problem 2
+
+;function definition
+(define (sum-up-numbers-simple L )
+  ;if the list is empty, display 0 
+  (cond
+   ((null? L) 0)
+   ;if the next value in the list is a list, recursively call the function with the remainder of the list
+   ((list? (car L)) (sum-up-numbers-simple (cdr L)))
+   ;test whether the values in the list are letters of the alphabet, if they are recursively call the function again with
+   ;the remainder of the list using cdr
+   ;test if the atom = a
+   ((eq? (car L)'a) (sum-up-numbers-simple(cdr L)))
+   ;test if the atom = b 
+   ((eq? (car L)'b) (sum-up-numbers-simple(cdr L)))
+   ;test if the atom = c
+   ((eq? (car L)'c) (sum-up-numbers-simple(cdr L)))
+   ;test if the atom = d
+   ((eq? (car L)'d) (sum-up-numbers-simple(cdr L)))
+   ;test if the atom = e
+   ((eq? (car L)'e) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = f
+   ((eq? (car L)'f) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = g
+   ((eq? (car L)'g) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = h
+   ((eq? (car L)'h) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = i
+   ((eq? (car L)'i) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = j
+   ((eq? (car L)'j) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = k
+   ((eq? (car L)'k) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = l
+   ((eq? (car L)'l) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = m
+   ((eq? (car L)'m) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = n
+   ((eq? (car L)'n) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = o
+   ((eq? (car L)'o) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = p
+   ((eq? (car L)'p) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = q
+   ((eq? (car L)'q) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = r
+   ((eq? (car L)'r) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = s
+   ((eq? (car L)'s) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = t
+   ((eq? (car L)'t) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = u
+   ((eq? (car L)'u) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = v
+   ((eq? (car L)'v) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = w
+   ((eq? (car L)'w) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = x
+   ((eq? (car L)'x) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = y
+   ((eq? (car L)'y) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = z
+   ((eq? (car L)'z) (sum-up-numbers-simple(cdr L)))
+   ;if an atom is a number, car atom and add it to the value returned when the function is called with the
+   ;remaining values in the list
+   (else (+(car L) (sum-up-numbers-simple(cdr L))))
+   )
+)
+
+;Problem 3
+
+;function definition
+(define (sum-up-numbers-simple L )
+  ;if the list is empty, display 0 
+  (cond
+   ((null? L) 0)
+   ;if the next value in the list is a list, recursively call the function with the remainder of the list
+   ((list? (car L)) (+(sum-up-numbers-simple (car L)) (sum-up-numbers-simple (cdr L))))
+   ;test whether the values in the list are letters of the alphabet, if they are recursively call the function again with
+   ;the remainder of the list using cdr
+   ;test if the atom = a
+   ((eq? (car L)'a) (sum-up-numbers-simple(cdr L)))
+   ;test if the atom = b 
+   ((eq? (car L)'b) (sum-up-numbers-simple(cdr L)))
+   ;test if the atom = c
+   ((eq? (car L)'c) (sum-up-numbers-simple(cdr L)))
+   ;test if the atom = d
+   ((eq? (car L)'d) (sum-up-numbers-simple(cdr L)))
+   ;test if the atom = e
+   ((eq? (car L)'e) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = f
+   ((eq? (car L)'f) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = g
+   ((eq? (car L)'g) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = h
+   ((eq? (car L)'h) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = i
+   ((eq? (car L)'i) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = j
+   ((eq? (car L)'j) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = k
+   ((eq? (car L)'k) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = l
+   ((eq? (car L)'l) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = m
+   ((eq? (car L)'m) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = n
+   ((eq? (car L)'n) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = o
+   ((eq? (car L)'o) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = p
+   ((eq? (car L)'p) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = q
+   ((eq? (car L)'q) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = r
+   ((eq? (car L)'r) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = s
+   ((eq? (car L)'s) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = t
+   ((eq? (car L)'t) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = u
+   ((eq? (car L)'u) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = v
+   ((eq? (car L)'v) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = w
+   ((eq? (car L)'w) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = x
+   ((eq? (car L)'x) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = y
+   ((eq? (car L)'y) (sum-up-numbers-simple(cdr L)))
+   ;test if atom = z
+   ((eq? (car L)'z) (sum-up-numbers-simple(cdr L)))
+   ;if an atom is a number, car atom and add it to the value returned when the function is called with the
+   ;remaining values in the list
+   (else (+(car L) (sum-up-numbers-simple(cdr L))))
+   )
+)
+
+;Problem 4
+
+;min-above-min function
+(define (min-above-min L1 L2)
+  (cond
+   ;if the first list is null, display #f
+   ((null? L1) #f)
+   ;if the second list is null, display the minimum of the first list
+   ((null? L2) (min-list L1))
+   ;otherwise call the second-smallest function with the minimum of L2 and all of L1
+   (else (second-smallest (min-list L2) L1 ))
+  )
+) 
+
+;min-list function to find the minimum of a list
+(define (min-list lst)
+  (cond
+  ;if the list is null, display #f
+   ((null? lst) #f)
+  ;if the list only has one value, return that value
+   ((null? (cdr lst)) (car lst))
+  ;if the first value in the list is smaller than the remainder of the list, return the first value
+   ((< (car lst) (min-list (cdr lst))) (car lst))
+  ;otherwise, recursively call the function witht the remainder of the list
+   (else (min-list (cdr lst)))
+  )
+)  
+
+;second-smallest function to find the smallest value in list 1 that is larger than the 
+;minimum of list 2
+(define (second-smallest atm lst)
+  (cond
+  ;if the list is null, return null value
+   ((null? lst) '())
+  ;if the first value in the list is equal to the minimum of the second list, remove it from the first list
+   ((=(car lst) atm) (second-smallest atm (cdr lst)))
+   ;otherwise, create a new list that does not contain the minimum. Find the minimum of this list to know the smallest
+   ;value that is larger than the minimum
+   (else (min-list(cons (car lst) (second-smallest atm (cdr lst)))))
+   )
+)
